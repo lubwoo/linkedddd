@@ -1,0 +1,127 @@
+<!--
+Save the two sections below as separate files in the same folder:
+  1) index.html
+  2) about.html
+Open index.html in a browser to view the site.
+-->
+
+<!-- FILE: index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Mini Site — Home</title>
+  <style>
+    :root{--bg:#f7fbff;--card:#ffffff;--accent:#2563eb;--muted:#6b7280}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;background:var(--bg);color:#111}
+    header{background:linear-gradient(90deg,#fff 0%,#f0f7ff 100%);padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#7dd3fc);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    nav a{margin-left:12px;text-decoration:none;color:var(--accent);font-weight:600}
+    main{max-width:980px;margin:28px auto;padding:22px}
+    .hero{display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:center}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(16,24,40,0.06)}
+    h1{margin:0 0 8px;font-size:28px}
+    p.lead{margin:0 0 16px;color:var(--muted)}
+    .actions{display:flex;gap:10px}
+    .btn{padding:10px 14px;border-radius:10px;border:0;font-weight:600;cursor:pointer}
+    .btn-primary{background:var(--accent);color:white}
+    .btn-ghost{background:transparent;border:1px solid rgba(37,99,235,0.12);color:var(--accent)}
+    .small{font-size:14px;color:var(--muted)}
+    footer{max-width:980px;margin:28px auto;padding:18px;text-align:center;color:var(--muted)}
+    @media(max-width:880px){.hero{grid-template-columns:1fr}nav a{display:none}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">MS</div>
+      <div>
+        <div style="font-weight:700">MiniSite</div>
+        <div class="small">Simple two-page example</div>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <!-- External link to another website: opens in a new tab -->
+      <a href="https://example.com" target="_blank" rel="noopener noreferrer">Visit Example.com ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="card">
+        <h1>Welcome — Quick site linking demo</h1>
+        <p class="lead">This small site shows an internal link (About) and an external link (Example.com). The external link opens in a new tab for safety and better UX.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="about.html">Go to About</a>
+          <a class="btn btn-ghost" href="https://example.com" target="_blank" rel="noopener noreferrer">Open Example.com</a>
+        </div>
+        <p class="small" style="margin-top:12px">Tip: change the external URL to any website you need. Keep <code>rel="noopener noreferrer"</code> and <code>target="_blank"</code> for safety.</p>
+      </div>
+
+      <div class="card">
+        <h3>Why use external links like this?</h3>
+        <ul>
+          <li class="small">Keeps users on your site while allowing them to visit resources in a new tab.</li>
+          <li class="small">Using <code>rel="noopener noreferrer"</code> improves security and performance.</li>
+        </ul>
+      </div>
+    </div>
+
+    <section style="margin-top:18px" class="card">
+      <h2 style="margin-top:0">Need more pages?</h2>
+      <p class="small">Copy the pattern used above to create extra pages (contact.html, products.html) and link them from the nav or from buttons.</p>
+    </section>
+  </main>
+
+  <footer>
+    Built with ❤️ — save these two files in the same folder and open <strong>index.html</strong>.
+  </footer>
+</body>
+</html>
+
+
+<!-- FILE: about.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — Mini Site</title>
+  <style>
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;background:#f7fbff;color:#111}
+    .wrap{max-width:880px;margin:28px auto;padding:20px}
+    header{display:flex;align-items:center;gap:12px}
+    a{color:#2563eb;text-decoration:none;font-weight:600}
+    .card{background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(16,24,40,0.06)}
+    .back{display:inline-block;margin-bottom:12px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div style="width:44px;height:44px;background:linear-gradient(135deg,#2563eb,#7dd3fc);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700">MS</div>
+      <div>
+        <div style="font-weight:700">MiniSite</div>
+        <div style="color:#6b7280">A tiny example</div>
+      </div>
+    </header>
+
+    <div class="card" style="margin-top:18px">
+      <a class="back" href="index.html">← Back to Home</a>
+      <h1 style="margin-top:6px">About this demo</h1>
+      <p class="small">This page demonstrates an internal link back to the home page. You can replace the content with information about your project, contact details, or portfolio items.</p>
+      <p class="small">Example external link:</p>
+      <p class="small"><a href="https://example.com" target="_blank" rel="noopener noreferrer">Open Example.com</a></p>
+    </div>
+
+    <section style="margin-top:16px;text-align:center;color:#6b7280;font-size:14px">
+      Want this exported as a single ZIP or deployed to GitHub Pages? Tell me and I can give the exact steps.
+    </section>
+  </div>
+</body>
+</html>
